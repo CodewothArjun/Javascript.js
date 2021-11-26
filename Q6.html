@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>  6. Write a JavaScript program to display the reverse of a given number .</title>
+</head>
+
+<body>
+   <br><br>
+
+    <script>
+        var N = prompt("Enter number to reverse....");
+        var rev = 0;
+        var M = N;
+        var rem;
+        while (N > 0) {
+            rem = N % 10;
+            rev = rev * 10 + rem;
+            N = Math.floor(N / 10);
+
+        }
+        document.write('The reverse of ' + M + ' is : ' + rev + '<br>');
+    </script>
+</body>
+</html>

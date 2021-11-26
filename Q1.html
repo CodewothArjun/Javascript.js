@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title> 1. Write a JavaScript program to calculate the simple interest using principal, rat, and time. <br> </title>
+
+    <script>
+
+        function calculate() {
+
+            var p = document.getElementById("p").value;
+            var t = document.getElementById("t").value;
+            var r = document.getElementById("r").value;
+            var si = (p * t * r) / 100;
+           document.getElementById("result").innerHTML = "Simple Interest is " + si;
+          
+        }
+
+    </script>
+</head>
+
+<body>
+    <br>
+    <p id="result">Your output well be print here.</p>
+    <form>
+        Principle= <input type="number" placeholder="Enter your principle" id="p"><br><br>
+        Time= <input type="number" placeholder="Enter a period of time" id="t">Yrs.<br><br>
+        Rate= <input type="number" placeholder="Enter rate of interest " id="r">%<br><br>
+        <button type="button" onclick="calculate()">Calculate</button>
+
+    </form>
+
+</body>
+
+</html>
+

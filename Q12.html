@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> 12. Write a JavaScript program to count the number of vowels present in the given string .</title>
+</head>
+
+<body>
+
+    <br><br>
+    <script>
+        string = prompt("Enter a string to count the vowel in that string...");
+        characters = vowelConsonentCounter(string);
+        document.write('<br> Number of  vowel = ' + characters['vowel']);
+        function vowelConsonentCounter(str) {
+            counter = 0;
+            dic = {}
+            for (i = 0; i < str.length; i++) {
+                if (str[i].toLowerCase() == 'a' || str[i].toLowerCase() == 'e' || str[i].toLowerCase() == 'i' || str[i].toLowerCase() == 'o' || str[i].toLowerCase() == 'u') {
+                    counter += 1;
+                }
+            }
+            dic.vowel = counter;
+            dic.consonent = str.length - counter;
+            return dic;
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+<!-- 
+NOTE= .toLowerCase() = JavaScript's toLowerCase() method takes a string and converts it into a new string consisting of only lowercase letters
+-->

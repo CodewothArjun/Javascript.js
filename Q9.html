@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title> 9. Write a JavaScript program to print the largest and smallest number among ten elements in array. </title>
+</head>
+<body>
+   <br><br>
+    <script>
+        array = [12, 34, 56, 76, 89, 90, 46, 67, 95, 363];
+        largest = array[0];
+        samllest = array[0];
+        for (var i = 0; i < array.length; i++) {
+            if (array[i] > largest) {
+                largest = array[i];
+            }
+            if (array[i] < samllest) {
+                samllest = array[i];
+            }
+        }
+        document.write(' <br>samllest element is ' + samllest);
+        document.write(' <br> largest element is ' + largest);
+    </script>
+</body>
+</html>
