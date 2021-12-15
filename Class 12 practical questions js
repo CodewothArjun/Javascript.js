@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document 4</title>
+</head>
+
+<body>
+    4. Write a JavaScript program to check
+    if a given number is even or odd . <br>
+    <p>
+        Enter a number:<br><br>
+        <input type="number" id="number"><br><br>
+        <button type="button" onclick="check()">Check</button>
+    </p>
+    <p id="result"></p>
+    <script>
+        function check() {
+            var N = document.getElementById("number").value;
+            var message="";
+            if (N % 2 == 0) {
+                message='The Number ' + N + ' is even. <br>';
+            }else{
+                message='The Number ' + N + ' is odd. <br>';
+            }
+            document.getElementById("result").innerHTML=message;
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+<html>
+
+<head>
+
+   <title>Qn 5</title>
+
+</head>
+
+<body>
+
+    5. Write a JavaScript program to display the largest among given three numbrs.
+
+    <h1>Check largest number </h1>
+
+    <br>
+
+    Enter number 1: <input type="number" id="N"></input><br>
+
+    Enter number 2: <input type="number" id="M"></input><br>
+
+    Enter number 3: <input type="number" id="O"></input><br>
+
+    <button type="button" onclick="largestnum()">Calculate</button>
+
+    <p id="result"></p>
+
+    <script>
+
+        function largestnum() {
+
+            var num1, num2, num3;
+
+            var message="";
+
+            num1 = Number(document.getElementById("N").value);
+
+            num2 = Number(document.getElementById("M").value);
+
+            num3 = Number(document.getElementById("O").value);
+
+            if (num1 > num2 && num1 > num3) {
+
+                message=num1 + " is greatest";
+
+            }
+
+            else if (num2 > num1 && num2 > num3) {
+
+                message=num2 + " is greatst";
+
+            }
+
+            else if (num3 > num1 && num3 > num1) {
+
+                message=num3 + " is greatest";
+
+            }
+
+            document.getElementById("result").innerHTML=message;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document 6</title>
+</head>
+<body>
+    7. Write a JavaScript program to check if a given number is palindrome or not .<p>
+        Enter a number: <input type="number" id="number"><br><br>
+        <button type="button" onclick="reverse()">Check</button>
+    </p>
+    <p id="result"></p>
+    <script>
+       function reverse(){
+        var n=document.getElementById("number").value;
+        var backup=n;
+        var rem;
+        var rev=0;
+        while(n>0){
+            rem = n % 10;
+            rev = rev * 10 + rem;
+            n = Math.floor(n / 10);
+        }
+        var message="The Number "+backup+" is ";
+        if(backup==rev){
+            message+="palindrom
+            e number";
+        }else{
+            message+="not palindrome number";
+        }
+        document.getElementById("result").innerHTML=message;
+       }
+    
+     
+   //reverse and palindrome also in same program
+     
+     
+     
+     
+     
+
+
+ 
+   
+    
+        
+
+        
+
+      
+
+
+      
+
+        
+
+     
+
+
+     
+
+     
+
+     
+
+     
+
+     
+
+     
+
+     
+
+     
+
+     
+
+     
+
+     
+
+
+
+       /*
+
+      var N = 3564;
+
+        var rev = 0;
+
+        var M = N;
+
+        var rem;
+
+        while (N > 0) {
+
+            rem = N % 10;
+
+            rev = rev * 10 + rem;
+
+            N = Math.floor(N / 10);
+
+        }
+
+        document.write('The reverse of ' + M + ' is :' + rev + '<br>');
+
+     */
+
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <title>Document 8
+
+    </title>
+
+</head>
+
+<body>
+
+    <p>Write a JavaScript program to calculate the factorial of a given number.</p>
+
+    <p>
+
+        Enter a number:<br><br>
+
+        <input type="number" id="num">
+
+        <br><br>
+
+        <button type="button" onclick="factorialno()">Calculate</button>
+
+    </p>
+
+    <p id="result"> here output </p>
+
+    <script>
+
+        function factorialno() {
+
+            var N = document.getElementById("num").value;
+
+            var i, fact = 1;
+
+            for (i = N; i > 0; i--) {
+
+                fact = fact * i;
+
+            }
+
+            document.getElementById("result").innerHTML = "Factorial of" + " " + N + " " + "is" + " " + fact;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+<html>
+
+<head>
+
+    <title>
+
+        Document 9
+
+    </title>
+
+</head>
+
+<body style="text-align: center;">
+
+    <p>Write a JavaScript program to print the largest and smallest number among 10 Elements of an Array.</p>
+
+    <h1 style="color: green;"> Class12.</h1>
+
+    <h3 id="po">Input Array Elements </h3>
+
+    <p id="p"> </p>
+
+    <form>
+
+        <input type="number" name="array[]">
+
+        <br>
+
+        <input type="number" name="array[]">
+
+        <br>
+
+        <input type="number" name="array[]">
+
+        <br>
+
+        <input type="number" name="array[]">
+
+        <br>
+
+        <input type="number" name="array[]">
+
+        <br>
+
+        <input type="number" name="array[]">
+
+        <br>
+
+        <input type="number" name="array[]">
+
+        <br>
+
+        <input type="number" name="array[]">
+
+        <br>
+
+        <input type="number" name="array[]">
+
+        <br>
+
+        <input type="number" name="array[]">
+
+        <br>
+
+        <button type="button" name="button" onclick="Check()"> Calculate
+
+        </button>
+
+    </form>
+
+    <br>
+
+    <br>
+
+    <script type="text/javascript">
+
+        function Check() {
+
+            var i;
+
+            var input = document.getElementsByName('array[]');
+
+            var large = input[0].value;
+
+            var small = input[0].value;
+
+            for (i = 0; i < input.length; i++) {
+
+                var a = input[i].value;
+
+                if (large < a) {
+
+                    large = a;
+
+                }
+
+                if (small > a) {
+
+                    small = a;
+
+                }
+
+            }
+
+            document.getElementById("po").innerHTML = "Output";
+
+            document.getElementById("p").innerHTML += "largest number is " + large + "<br>";
+
+            document.getElementById("p").innerHTML += "smallest number is " + small;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+     
+     
+     
+     
+     
+     
+     
+     
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Js program to sort the data of array</title>
+</head>
+
+<body>
+    <h1>QNO 10. Javascript</h1>
+    <form id="arraydataform">
+        <h1> input 10 numbers for shorting</h1>
+        <input type="number"><br>
+        <input type="number"><br>
+        <input type="number"><br>
+        <input type="number"><br>
+        <input type="number"><br>
+        <input type="number"><br>
+        <input type="number"><br>
+        <input type="number"><br>
+        <input type="number"><br>
+        <input type="number"><br>
+
+    </form>
+    <button type="submit" onclick="getDatas()">assend</button>
+    <div id="display"></div>
+    <script>
+        var temp = 0
+        var display = document.getElementById('display')
+        function getDatas() {
+            var array = []
+            var inputs = document.getElementById('arraydataform').getElementsByTagName('input')
+            for (var i = 0; i < inputs.length; i++) {
+                array.push(inputs[i].value)
+            }
+        }
+        var array = []
+        function getDatas() {
+            // DATA STORING IN ARRAY 
+
+            var inputs = document.getElementById('arraydataform').getElementsByTagName('input')
+            for (var i = 0; i < inputs.length; i++) {
+                array.push(inputs[i].value)
+            }
+            console.log(array)
+            //  DISPLAYING THE ARRAY STORED IN HTML PAGE
+
+            display.innerHTML += 'before shorting  : ['
+            for (var i = 0; i < array.length; i++) {
+                if (i != array.length - 1) {
+                    display.innerHTML += array[i] + ','
+                } else {
+                    display.innerHTML += array[i]
+                }
+            }
+            display.innerHTML += ']'
+            // MAJOR PART OF SHORTING
+            for (var i = 0; i < array.length; i++) {
+                for (var j = 0; j < array.length; j++) {
+                    if (parseInt(array[j + 1]) < parseInt(array[j])) {
+                        temp = array[j]
+                        array[j] = array[j + 1]
+                        array[j + 1] = temp
+                    }
+                }
+            }
+            // DISPLAYING THE SHORTED ARRAY
+            display.innerHTML += '<br> After shorting : ['
+            for (var i = 0; i < array.length; i++) {
+                inputs[i].value = array[i]
+                if (i != array.length - 1) {
+                    display.innerHTML += array[i] + ','
+                } else {
+                    display.innerHTML += array[i]
+                }
+            }
+            display.innerHTML += ']'
+        }
+    </script>
+</body>
+
+</html>
+
+     
+    
+    
+    
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <title>Document 11</title>
+
+</head>
+
+<body>
+
+    <h1>/Write a JavaScript Program to reverse a given string.</h1>
+
+    <p>
+
+        Enter a string: <br><br>
+
+        <input type="text" id="str">
+
+        <button type="button" onclick="reverse()">Tap To Reverse a String</button>
+
+    </p>
+
+    <p id="result">Here is your output</p>
+
+    <script>
+
+        function reverse(){
+
+            var rev=''
+
+            var string=document.getElementById('str').value
+
+            for(var i=string.length-1; i>=0; i--){
+
+             rev+=string[i]
+
+                }
+
+                document.getElementById('str').value=rev
+
+                document.getElementById('result').innerHTML='The reverse of string <u>'+string+'</u> is <b>'+rev+'</b>.'
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document 12</title>
+
+</head>
+
+<body>
+
+    <h1>Write the javascript program to count the number of vowels present in the given string </h1>
+
+    <input type="text" id="string">
+
+    <button onclick="vowelConsonentCounter()">count vowel</button>
+
+    <div id="result"></div>
+
+    <script>
+
+        function vowelConsonentCounter(){
+
+            var counter=0;
+
+            var str=document.getElementById('string').value
+
+            for(i=0; i<str.length;i++){
+
+                if(str[i].toLowerCase()=='a' || str[i].toLowerCase()=='e' || str[i].toLowerCase()=='i'|| str[i].toLowerCase()=='o'|| str[i].toLowerCase()=='u' ){
+
+                    counter+=1
+
+                }
+
+            }
+
+            document.getElementById('result').innerHTML='The vowels present in the given string "'+str +'" is :'+counter
+
+           
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+     
+     
+
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document 13</title>
+
+</head>
+
+<body>
+
+    <h1> WAJP to calculate the factorials of given number using the concept of recursion.</h1>
+
+    <input type="number"  id="givennumber">
+
+    <button onclick="Factorial()">Calculate factorial</button>
+
+    <div id="result">
+
+    </div>
+
+    <script>
+
+        function Factorial(){
+
+          var number=document.getElementById('givennumber').value;
+
+          var factorial=factorials(number)
+
+        document.getElementById('result').innerHTML='The factorial of '+number+' is :'+factorial;
+
+        }
+
+        function factorials(n){
+
+          if(n==0 || n==1){
+
+              return 1;
+
+          }else{
+
+              return n*factorials(n-1)
+
+          }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+
+     
+     
+
